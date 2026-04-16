@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUNRGBD Smart-Home Label Tool</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f6f8;
+      color: #1d2430;
+    }
+    .topbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #d8dde6;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(720px, 1fr) 360px;
+      gap: 14px;
+      padding: 14px;
+    }
+    .panel {
+      background: #ffffff;
+      border: 1px solid #d8dde6;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    }
+    .image-wrap {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      background: #111827;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #rgbImage {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    #overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 12px;
+    }
+    .depth-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      background: #111827;
+    }
+    .controls-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    button, select, input, textarea {
+      font: inherit;
+    }
+    button {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #c9d1dc;
+      background: #f9fafb;
+      cursor: pointer;
+    }
+    button.primary {
+      background: #0f62fe;
+      color: white;
+      border-color: #0f62fe;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #c9d1dc;
+      box-sizing: border-box;
+      background: white;
+    }
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .instance-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 220px;
+      overflow: auto;
+    }
+    .instance-item {
+      padding: 8px 10px;
+      border: 1px solid #d8dde6;
+      border-radius: 8px;
+      background: #f8fafc;
+      cursor: pointer;
+    }
+    .instance-item.active {
+      border-color: #0f62fe;
+      background: #eef4ff;
+    }
+    .muted {
+      color: #64748b;
+      font-size: 13px;
+    }
+    .field {
+      margin-top: 12px;
+    }
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .status {
+      font-size: 13px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+    <div class="topbar">
+    <div>
+      <div id="sceneTitle"><strong>Loading...</strong></div>
+      <div id="sceneMeta" class="muted"></div>
+    </div>
+    <div class="controls-row">
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+      <button id="resetOverlayBtn">Reset Overlay</button>
+      <button id="undoPointBtn">Undo Last Point</button>
+      <button id="clearPointsBtn">Clear Points</button>
+      <label>Mode
+        <select id="clickMode">
+          <option value="select">select</option>
+          <option value="move">move</option>
+          <option value="positive">positive</option>
+          <option value="negative">negative</option>
+        </select>
+      </label>
+      <button id="saveBtn" class="primary">Save</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="panel">
+      <div class="image-grid">
+        <div class="image-wrap">
+          <img id="rgbImage" alt="RGB scene">
+          <canvas id="overlay"></canvas>
+        </div>
+        <div class="depth-wrap">
+          <img id="depthImage" alt="Depth scene">
+        </div>
+      </div>
+      <div class="field">
+        <div id="status" class="status">Ready.</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div><strong>Target Instances</strong></div>
+      <div id="instanceList" class="instance-list field"></div>
+
+      <div class="field">
+        <label for="instanceState"><strong>Instance State</strong></label>
+        <div id="instanceStateGroup" class="radio-group"></div>
+      </div>
+
+      <div class="field">
+        <label>
+          <input id="badPolygonCheckbox" type="checkbox">
+          <strong>Bad Polygon / Unreliable Shape</strong>
+        </label>
+      </div>
+
+      <div class="field">
+        <label for="sceneEnergy"><strong>Scene Energy Label</strong></label>
+        <select id="sceneEnergy"></select>
+      </div>
+
+      <div class="field">
+        <label for="reviewer"><strong>Reviewer</strong></label>
+        <input id="reviewer" type="text">
+      </div>
+
+      <div class="field">
+        <label for="notes"><strong>Notes</strong></label>
+        <textarea id="notes"></textarea>
+      </div>
+
+      <div class="field muted">
+        Existing SUNRGBD polygons are shown for inspection. If a shape drifts, switch to <strong>move</strong> mode and drag the selected overlay. Positive and negative clicks are saved as SAM2-ready prompts for the selected object.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const STATE_OPTIONS = {
+      lamp: ["unknown", "on", "off", "unclear"],
+      monitor_or_tv: ["unknown", "on", "off", "unclear"],
+      door: ["unknown", "open", "closed", "unclear"],
+    };
+    const SCENE_ENERGY_OPTIONS = [
+      "unknown",
+      "none",
+      "possible_unnecessary_lighting",
+      "possible_idle_monitor_usage",
+      "possible_open_door_inefficiency",
+      "multiple_possible_issues",
+      "unclear",
+    ];
+    const COLORS = {
+      lamp: "#ffb000",
+      monitor_or_tv: "#00a6ff",
+      door: "#48c774",
+    };
+
+    const state = {
+      manifest: [],
+      labels: null,
+      sceneIndex: 0,
+      selectedInstanceId: null,
+      imageNaturalWidth: 1,
+      imageNaturalHeight: 1,
+      dragState: null,
+    };
+
+    const sceneTitle = document.getElementById("sceneTitle");
+    const sceneMeta = document.getElementById("sceneMeta");
+    const rgbImage = document.getElementById("rgbImage");
+    const depthImage = document.getElementById("depthImage");
+    const overlay = document.getElementById("overlay");
+    const instanceList = document.getElementById("instanceList");
+    const instanceStateGroup = document.getElementById("instanceStateGroup");
+    const sceneEnergy = document.getElementById("sceneEnergy");
+    const reviewer = document.getElementById("reviewer");
+    const notes = document.getElementById("notes");
+    const clickMode = document.getElementById("clickMode");
+    const statusEl = document.getElementById("status");
+    const badPolygonCheckbox = document.getElementById("badPolygonCheckbox");
+    const resetOverlayBtn = document.getElementById("resetOverlayBtn");
+    const undoPointBtn = document.getElementById("undoPointBtn");
+    const clearPointsBtn = document.getElementById("clearPointsBtn");
+
+    function currentScene() {
+      return state.manifest[state.sceneIndex];
+    }
+
+    function currentAnnotation() {
+      return state.labels.scene_annotations[currentScene().scene_id];
+    }
+
+    function selectedInstance() {
+      return currentScene().instances.find(x => x.instance_id === state.selectedInstanceId) || null;
+    }
+
+    function instanceAnnotation(instanceId) {
+      const ann = currentAnnotation();
+      if (!ann.instances[instanceId]) {
+        ann.instances[instanceId] = {
+          state: "unknown",
+          bad_polygon: false,
+          overlay_offset_xy: [0, 0],
+          sam2_prompts: {
+            positive_points: [],
+            negative_points: [],
+            box_xyxy: [0, 0, 0, 0],
+          },
+        };
+      }
+      const instanceState = ann.instances[instanceId];
+      if (typeof instanceState.bad_polygon !== "boolean") instanceState.bad_polygon = false;
+      if (!instanceState.overlay_offset_xy) instanceState.overlay_offset_xy = [0, 0];
+      if (!instanceState.sam2_prompts) {
+        instanceState.sam2_prompts = {positive_points: [], negative_points: [], box_xyxy: [0, 0, 0, 0]};
+      }
+      if (!instanceState.sam2_prompts.positive_points) instanceState.sam2_prompts.positive_points = [];
+      if (!instanceState.sam2_prompts.negative_points) instanceState.sam2_prompts.negative_points = [];
+      return instanceState;
+    }
+
+    function instanceOffset(instance) {
+      return instanceAnnotation(instance.instance_id).overlay_offset_xy || [0, 0];
+    }
+
+    function offsetPolygon(instance) {
+      const [dx, dy] = instanceOffset(instance);
+      return instance.polygon_xy.map(([x, y]) => [x + dx, y + dy]);
+    }
+
+    function setStatus(message) {
+      statusEl.textContent = message;
+    }
+
+    function pointInPolygon(x, y, polygon) {
+      let inside = false;
+      for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+        const xi = polygon[i][0], yi = polygon[i][1];
+        const xj = polygon[j][0], yj = polygon[j][1];
+        const intersects = ((yi > y) !== (yj > y)) &&
+          (x < (xj - xi) * (y - yi) / Math.max((yj - yi), 1e-9) + xi);
+        if (intersects) inside = !inside;
+      }
+      return inside;
+    }
+
+    async function loadBootstrap() {
+      const response = await fetch("/api/bootstrap");
+      const data = await response.json();
+      state.manifest = data.manifest;
+      state.labels = data.labels;
+      if (state.manifest.length === 0) {
+        setStatus("No scenes available for this split.");
+        return;
+      }
+      populateSceneEnergyOptions();
+      renderScene();
+    }
+
+    function populateSceneEnergyOptions() {
+      sceneEnergy.innerHTML = "";
+      for (const option of SCENE_ENERGY_OPTIONS) {
+        const node = document.createElement("option");
+        node.value = option;
+        node.textContent = option;
+        sceneEnergy.appendChild(node);
+      }
+    }
+
+    function renderScene() {
+      const scene = currentScene();
+      const ann = currentAnnotation();
+      if (!state.selectedInstanceId && scene.instances.length > 0) {
+        state.selectedInstanceId = scene.instances[0].instance_id;
+      }
+
+      sceneTitle.innerHTML = `<strong>${state.sceneIndex + 1}/${state.manifest.length} ${scene.scene_id}</strong>`;
+      sceneMeta.textContent = `${scene.split || "all"} | ${scene.scene_type || ""} | ${scene.target_categories || ""}`;
+
+      rgbImage.src = `/api/image?path=${encodeURIComponent(scene.image_relpath)}`;
+      if (scene.depth_relpath) {
+        depthImage.src = `/api/image?path=${encodeURIComponent(scene.depth_relpath)}`;
+      } else {
+        depthImage.removeAttribute("src");
+      }
+
+      sceneEnergy.value = ann.scene_energy_label || "unknown";
+      reviewer.value = ann.reviewer || "";
+      notes.value = ann.notes || "";
+
+      renderInstanceList();
+      renderInstanceStateControls();
+      drawOverlay();
+      setStatus("Scene loaded.");
+    }
+
+    function renderInstanceList() {
+      const scene = currentScene();
+      const ann = currentAnnotation();
+      instanceList.innerHTML = "";
+
+      if (scene.instances.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "muted";
+        empty.textContent = "No usable target polygons found for this scene.";
+        instanceList.appendChild(empty);
+        return;
+      }
+
+      for (const instance of scene.instances) {
+        const item = document.createElement("div");
+        item.className = "instance-item" + (instance.instance_id === state.selectedInstanceId ? " active" : "");
+        const saved = instanceAnnotation(instance.instance_id);
+        const [dx, dy] = saved.overlay_offset_xy || [0, 0];
+        item.textContent = `${instance.instance_id} [${instance.source_object_name}] : ${saved.state}`;
+        if (saved.bad_polygon) {
+          item.textContent += " [bad polygon]";
+        }
+        if (dx !== 0 || dy !== 0) {
+          item.textContent += ` (shift ${Math.round(dx)}, ${Math.round(dy)})`;
+        }
+        item.onclick = () => {
+          state.selectedInstanceId = instance.instance_id;
+          renderScene();
+        };
+        instanceList.appendChild(item);
+      }
+    }
+
+    function renderInstanceStateControls() {
+      const instance = selectedInstance();
+      const ann = currentAnnotation();
+      instanceStateGroup.innerHTML = "";
+      if (!instance) return;
+      const saved = instanceAnnotation(instance.instance_id);
+      badPolygonCheckbox.checked = !!saved.bad_polygon;
+
+      for (const option of STATE_OPTIONS[instance.target_category]) {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "instanceState";
+        input.value = option;
+        input.checked = saved.state === option;
+        input.onchange = () => {
+          saved.state = option;
+          renderInstanceList();
+          drawOverlay();
+        };
+        label.appendChild(input);
+        label.append(" " + option);
+        instanceStateGroup.appendChild(label);
+      }
+    }
+
+    function resizeCanvas() {
+      const rect = rgbImage.getBoundingClientRect();
+      overlay.width = rect.width;
+      overlay.height = rect.height;
+      overlay.style.width = `${rect.width}px`;
+      overlay.style.height = `${rect.height}px`;
+    }
+
+    function drawOverlay() {
+      if (!rgbImage.complete || rgbImage.naturalWidth === 0) return;
+      resizeCanvas();
+      state.imageNaturalWidth = rgbImage.naturalWidth;
+      state.imageNaturalHeight = rgbImage.naturalHeight;
+
+      const ctx = overlay.getContext("2d");
+      ctx.clearRect(0, 0, overlay.width, overlay.height);
+
+      const sx = overlay.width / state.imageNaturalWidth;
+      const sy = overlay.height / state.imageNaturalHeight;
+      const scene = currentScene();
+      const ann = currentAnnotation();
+
+      for (const instance of scene.instances) {
+        const isSelected = instance.instance_id === state.selectedInstanceId;
+        const color = COLORS[instance.target_category] || "#ffffff";
+        const saved = instanceAnnotation(instance.instance_id);
+        const polygon = offsetPolygon(instance);
+
+        ctx.beginPath();
+        polygon.forEach((pt, idx) => {
+          const x = pt[0] * sx;
+          const y = pt[1] * sy;
+          if (idx === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fillStyle = hexToRgba(color, isSelected ? 0.32 : 0.14);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = isSelected ? 4 : 2;
+        ctx.fill();
+        ctx.stroke();
+
+        const [lx, ly] = polygon[0];
+        ctx.fillStyle = color;
+        ctx.font = "13px sans-serif";
+        const qualitySuffix = saved.bad_polygon ? ":bad_polygon" : "";
+        ctx.fillText(`${instance.instance_id}:${saved.state}${qualitySuffix}`, lx * sx + 4, ly * sy + 14);
+
+        for (const [px, py] of saved.sam2_prompts.positive_points || []) {
+          drawPoint(ctx, px * sx, py * sy, "#00ff66");
+        }
+        for (const [px, py] of saved.sam2_prompts.negative_points || []) {
+          drawPoint(ctx, px * sx, py * sy, "#ff4d4d");
+        }
+      }
+    }
+
+    function drawPoint(ctx, x, y, color) {
+      ctx.beginPath();
+      ctx.arc(x, y, 5, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    function hexToRgba(hex, alpha) {
+      const value = hex.replace("#", "");
+      const r = parseInt(value.slice(0, 2), 16);
+      const g = parseInt(value.slice(2, 4), 16);
+      const b = parseInt(value.slice(4, 6), 16);
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+
+    function saveSceneFormIntoState() {
+      const ann = currentAnnotation();
+      ann.scene_energy_label = sceneEnergy.value;
+      ann.reviewer = reviewer.value;
+      ann.notes = notes.value;
+    }
+
+    async function saveCurrentScene() {
+      saveSceneFormIntoState();
+      const scene = currentScene();
+      await fetch("/api/save-scene", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          scene_id: scene.scene_id,
+          annotation: currentAnnotation(),
+        }),
+      });
+      setStatus("Saved.");
+      renderInstanceList();
+    }
+
+    async function moveScene(delta) {
+      saveSceneFormIntoState();
+      const next = state.sceneIndex + delta;
+      if (next < 0 || next >= state.manifest.length) return;
+      state.sceneIndex = next;
+      if (!currentScene().instances.some(x => x.instance_id === state.selectedInstanceId)) {
+        state.selectedInstanceId = currentScene().instances[0]?.instance_id || null;
+      }
+      renderScene();
+    }
+
+    overlay.addEventListener("click", (event) => {
+      const scene = currentScene();
+      const instance = selectedInstance();
+      const rect = overlay.getBoundingClientRect();
+      const canvasX = event.clientX - rect.left;
+      const canvasY = event.clientY - rect.top;
+      const imgX = canvasX / overlay.width * state.imageNaturalWidth;
+      const imgY = canvasY / overlay.height * state.imageNaturalHeight;
+      const mode = clickMode.value;
+
+      if (mode === "select") {
+        for (const item of scene.instances) {
+          if (pointInPolygon(imgX, imgY, offsetPolygon(item))) {
+            state.selectedInstanceId = item.instance_id;
+            renderScene();
+            return;
+          }
+        }
+        return;
+      }
+
+      if (!instance) return;
+      const promptState = instanceAnnotation(instance.instance_id).sam2_prompts;
+      const key = mode === "positive" ? "positive_points" : "negative_points";
+      promptState[key].push([Math.round(imgX * 10) / 10, Math.round(imgY * 10) / 10]);
+      drawOverlay();
+      setStatus(`${mode} point added to ${instance.instance_id}`);
+    });
+
+    overlay.addEventListener("mousedown", (event) => {
+      if (clickMode.value !== "move") return;
+      const instance = selectedInstance();
+      if (!instance) return;
+      const rect = overlay.getBoundingClientRect();
+      const canvasX = event.clientX - rect.left;
+      const canvasY = event.clientY - rect.top;
+      const imgX = canvasX / overlay.width * state.imageNaturalWidth;
+      const imgY = canvasY / overlay.height * state.imageNaturalHeight;
+      const polygon = offsetPolygon(instance);
+      if (!pointInPolygon(imgX, imgY, polygon)) return;
+
+      const [dx, dy] = instanceOffset(instance);
+      state.dragState = {
+        instanceId: instance.instance_id,
+        startX: imgX,
+        startY: imgY,
+        originDx: dx,
+        originDy: dy,
+      };
+      setStatus(`Dragging ${instance.instance_id}`);
+      event.preventDefault();
+    });
+
+    overlay.addEventListener("mousemove", (event) => {
+      if (!state.dragState) return;
+      const instance = selectedInstance();
+      if (!instance || instance.instance_id !== state.dragState.instanceId) return;
+      const rect = overlay.getBoundingClientRect();
+      const canvasX = event.clientX - rect.left;
+      const canvasY = event.clientY - rect.top;
+      const imgX = canvasX / overlay.width * state.imageNaturalWidth;
+      const imgY = canvasY / overlay.height * state.imageNaturalHeight;
+      const dx = state.dragState.originDx + (imgX - state.dragState.startX);
+      const dy = state.dragState.originDy + (imgY - state.dragState.startY);
+      instanceAnnotation(instance.instance_id).overlay_offset_xy = [
+        Math.round(dx * 10) / 10,
+        Math.round(dy * 10) / 10,
+      ];
+      drawOverlay();
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (!state.dragState) return;
+      setStatus(`Moved ${state.dragState.instanceId}. Click Save to persist.`);
+      state.dragState = null;
+      renderInstanceList();
+      drawOverlay();
+    });
+
+    rgbImage.addEventListener("load", drawOverlay);
+    window.addEventListener("resize", drawOverlay);
+    document.getElementById("prevBtn").onclick = () => moveScene(-1);
+    document.getElementById("nextBtn").onclick = () => moveScene(1);
+    document.getElementById("saveBtn").onclick = () => saveCurrentScene();
+    resetOverlayBtn.onclick = () => {
+      const instance = selectedInstance();
+      if (!instance) return;
+      instanceAnnotation(instance.instance_id).overlay_offset_xy = [0, 0];
+      drawOverlay();
+      renderInstanceList();
+      setStatus(`Reset ${instance.instance_id} overlay.`);
+    };
+    undoPointBtn.onclick = () => {
+      const instance = selectedInstance();
+      if (!instance) return;
+      const prompts = instanceAnnotation(instance.instance_id).sam2_prompts;
+      const mode = clickMode.value;
+      let targetList = null;
+      if (mode === "positive") targetList = prompts.positive_points;
+      else if (mode === "negative") targetList = prompts.negative_points;
+      else {
+        setStatus("Switch Mode to positive or negative, then click Undo Last Point.");
+        return;
+      }
+      if (!targetList.length) {
+        setStatus(`No ${mode} points to undo for ${instance.instance_id}.`);
+        return;
+      }
+      targetList.pop();
+      drawOverlay();
+      setStatus(`Removed last ${mode} point from ${instance.instance_id}. Click Save to persist.`);
+    };
+    clearPointsBtn.onclick = () => {
+      const instance = selectedInstance();
+      if (!instance) return;
+      const prompts = instanceAnnotation(instance.instance_id).sam2_prompts;
+      prompts.positive_points = [];
+      prompts.negative_points = [];
+      drawOverlay();
+      setStatus(`Cleared all prompt points for ${instance.instance_id}. Click Save to persist.`);
+    };
+    badPolygonCheckbox.onchange = () => {
+      const instance = selectedInstance();
+      if (!instance) return;
+      instanceAnnotation(instance.instance_id).bad_polygon = badPolygonCheckbox.checked;
+      renderInstanceList();
+      drawOverlay();
+      setStatus(`Updated bad polygon flag for ${instance.instance_id}. Click Save to persist.`);
+    };
+    sceneEnergy.onchange = saveSceneFormIntoState;
+    reviewer.onblur = saveSceneFormIntoState;
+    notes.onblur = saveSceneFormIntoState;
+
+    loadBootstrap();
+  </script>
+</body>
+</html>

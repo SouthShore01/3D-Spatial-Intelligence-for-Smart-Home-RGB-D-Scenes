@@ -1,0 +1,24 @@
+{
+  "total_scenes": 10333,
+  "sensor_family_counts": {
+    "kv1": 2001,
+    "kv2": 3784,
+    "realsense": 1159,
+    "xtion": 3389
+  },
+  "target_category_presence": {
+    "door": 2554,
+    "lamp": 1360,
+    "monitor_or_tv": 1407
+  },
+  "target_category_combinations": {
+    "door": 2033,
+    "lamp": 976,
+    "lamp+door": 189,
+    "lamp+monitor_or_tv": 159,
+    "lamp+monitor_or_tv+door": 36,
+    "monitor_or_tv": 916,
+    "monitor_or_tv+door": 296,
+    "none": 5728
+  }
+}
