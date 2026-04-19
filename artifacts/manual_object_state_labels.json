@@ -4426,74 +4426,97 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                409.2,
+                114
+              ]
+            ],
             "box_xyxy": [
-              217.0,
-              33.0,
-              267.0,
-              234.0
+              217,
+              33,
+              267,
+              234
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            45
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                335.2,
+                60
+              ]
+            ],
             "box_xyxy": [
-              341.0,
-              22.0,
-              381.0,
-              145.0
+              341,
+              22,
+              381,
+              145
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            42
           ],
           "bad_polygon": false
         },
         "door_3": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                534.2,
+                143
+              ],
+              [
+                89.2,
+                63
+              ],
+              [
+                344.2,
+                70
+              ]
+            ],
             "box_xyxy": [
-              109.0,
-              20.0,
-              343.0,
-              230.0
+              109,
+              20,
+              343,
+              230
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            84,
+            40
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "unclear",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              398.0,
-              65.0,
-              423.0,
-              162.0
+              398,
+              65,
+              423,
+              162
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            33
           ],
           "bad_polygon": false
         }
@@ -4505,40 +4528,49 @@
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              212.0,
-              114.0,
-              291.0,
-              177.0
+              212,
+              114,
+              291,
+              177
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            34
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "unclear",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                486.2,
+                189.8
+              ],
+              [
+                465.2,
+                197.8
+              ]
+            ],
             "box_xyxy": [
-              378.0,
-              180.0,
-              387.0,
-              202.0
+              378,
+              180,
+              387,
+              202
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -4553,162 +4585,220 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              343.0,
-              72.0,
-              352.0,
-              98.0
+              343,
+              72,
+              352,
+              98
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            71,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                333.2,
+                181
+              ]
+            ],
             "box_xyxy": [
-              255.0,
-              139.0,
-              286.0,
-              177.0
+              255,
+              139,
+              286,
+              177
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            73,
+            32
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_2": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                504.2,
+                41
+              ],
+              [
+                288.2,
+                144
+              ]
+            ],
             "box_xyxy": [
-              367.0,
-              1.0,
-              561.0,
-              170.0
+              367,
+              1,
+              561,
+              170
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            85,
+            27
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0436": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "multiple_possible_issues",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                461.2,
+                63
+              ],
+              [
+                503.2,
+                128
+              ],
+              [
+                504.2,
+                101
+              ],
+              [
+                312.2,
+                125
+              ]
+            ],
             "box_xyxy": [
-              392.0,
-              54.0,
-              466.0,
-              258.0
+              392,
+              54,
+              466,
+              258
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            44
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              261.0,
-              121.0,
-              340.0,
-              191.0
+              261,
+              121,
+              340,
+              191
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            83,
+            33
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0437": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "multiple_possible_issues",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                421.2,
+                99
+              ],
+              [
+                237.2,
+                121
+              ],
+              [
+                223.2,
+                131
+              ]
+            ],
             "box_xyxy": [
-              321.0,
-              57.0,
-              365.0,
-              272.0
+              321,
+              57,
+              365,
+              272
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            37
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                317.2,
+                157
+              ]
+            ],
             "box_xyxy": [
-              179.0,
-              111.0,
-              271.0,
-              208.0
+              179,
+              111,
+              271,
+              208
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            72,
+            36
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0474": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                106.2,
+                143
+              ],
+              [
+                346.2,
+                129
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              88.0,
-              59.0,
-              154.0
+              1,
+              88,
+              59,
+              154
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            37
           ],
           "bad_polygon": false
         },
@@ -4716,19 +4806,36 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                448.2,
+                145
+              ],
+              [
+                409.2,
+                125
+              ],
+              [
+                442.2,
+                151
+              ],
+              [
+                320.2,
+                144
+              ]
+            ],
             "box_xyxy": [
-              324.0,
-              111.0,
-              354.0,
-              143.0
+              324,
+              111,
+              354,
+              143
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -17,
+            23
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -4743,17 +4850,17 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              554.0,
-              325.0,
-              561.0,
-              427.0
+              554,
+              325,
+              561,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "monitor_or_tv_1": {
           "state": "unknown",
@@ -4761,58 +4868,68 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              1.0,
-              188.0,
-              8.0,
-              256.0
+              1,
+              188,
+              8,
+              256
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
     "kv1__NYUdata__NYU0485": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                277.2,
+                130
+              ]
+            ],
             "box_xyxy": [
-              120.0,
-              1.0,
-              238.0,
-              366.0
+              120,
+              1,
+              238,
+              366
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            86,
+            36
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                549.2,
+                131
+              ]
+            ],
             "box_xyxy": [
-              392.0,
-              35.0,
-              561.0,
-              175.0
+              392,
+              35,
+              561,
+              175
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            33
           ],
           "bad_polygon": false
         }
@@ -4824,38 +4941,55 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                234.2,
+                41
+              ],
+              [
+                225.2,
+                123
+              ],
+              [
+                277.2,
+                130
+              ],
+              [
+                156.2,
+                87
+              ]
+            ],
             "box_xyxy": [
-              187.0,
-              1.0,
-              220.0,
-              99.0
+              187,
+              1,
+              220,
+              99
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            36
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              122.0,
-              76.0,
-              155.0,
-              158.0
+              122,
+              76,
+              155,
+              158
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            35
           ],
           "bad_polygon": false
         }
@@ -4867,81 +5001,109 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                221.2,
+                35
+              ]
+            ],
             "box_xyxy": [
-              57.0,
-              1.0,
-              246.0,
-              377.0
+              57,
+              1,
+              246,
+              377
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            29
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0552": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                211.2,
+                163
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              86.0,
-              63.0,
-              427.0
+              1,
+              86,
+              63,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            48
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                243.2,
+                156
+              ],
+              [
+                477.2,
+                136
+              ],
+              [
+                485.2,
+                117
+              ]
+            ],
             "box_xyxy": [
-              47.0,
-              115.0,
-              211.0,
-              227.0
+              47,
+              115,
+              211,
+              227
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            36
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_2": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                528.2,
+                141
+              ]
+            ],
             "box_xyxy": [
-              426.0,
-              102.0,
-              468.0,
-              152.0
+              426,
+              102,
+              468,
+              152
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            35
           ],
           "bad_polygon": false
         }
@@ -4953,63 +5115,81 @@
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                200.2,
+                104
+              ],
+              [
+                219.2,
+                142
+              ],
+              [
+                556.2,
+                137
+              ]
+            ],
             "box_xyxy": [
-              107.0,
-              89.0,
-              176.0,
-              155.0
+              107,
+              89,
+              176,
+              155
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            31
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              534.0,
-              125.0,
-              561.0,
-              168.0
+              534,
+              125,
+              561,
+              168
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            12,
+            16
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
     "kv1__NYUdata__NYU0554": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                410.2,
+                166
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              105.0,
-              417.0
+              1,
+              1,
+              105,
+              417
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            38
           ],
           "bad_polygon": false
         },
@@ -5017,17 +5197,22 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                420.2,
+                160
+              ]
+            ],
             "box_xyxy": [
-              299.0,
-              125.0,
-              371.0,
-              208.0
+              299,
+              125,
+              371,
+              208
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            35
           ],
           "bad_polygon": false
         }
@@ -5042,19 +5227,24 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                278.2,
+                60
+              ]
+            ],
             "box_xyxy": [
-              292.0,
-              1.0,
-              293.0,
-              2.0
+              292,
+              1,
+              293,
+              2
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -5064,38 +5254,60 @@
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                371.2,
+                162
+              ],
+              [
+                34.2,
+                173
+              ],
+              [
+                29.2,
+                168
+              ]
+            ],
             "box_xyxy": [
-              224.0,
-              117.0,
-              323.0,
-              237.0
+              224,
+              117,
+              323,
+              237
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            84,
+            35
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                526.2,
+                147
+              ],
+              [
+                526.2,
+                193
+              ]
+            ],
             "box_xyxy": [
-              545.0,
-              356.0,
-              561.0,
-              395.0
+              545,
+              356,
+              561,
+              395
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            5,
+            -217
           ],
           "bad_polygon": false
         },
@@ -5103,85 +5315,120 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                110.2,
+                283
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              9.0,
-              49.0,
-              326.0
+              1,
+              9,
+              49,
+              326
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            61
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0580": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              514.0,
-              1.0,
-              561.0,
-              324.0
+              514,
+              1,
+              561,
+              324
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            29,
+            43
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                533.2,
+                196
+              ]
+            ],
             "box_xyxy": [
-              408.0,
-              130.0,
-              481.0,
-              237.0
+              408,
+              130,
+              481,
+              237
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            37
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0581": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                371.2,
+                71
+              ],
+              [
+                461.2,
+                146
+              ],
+              [
+                399.2,
+                187
+              ],
+              [
+                398.2,
+                172
+              ],
+              [
+                377.2,
+                112
+              ],
+              [
+                367.2,
+                62
+              ]
+            ],
             "box_xyxy": [
-              290.0,
-              1.0,
-              345.0,
-              240.0
+              290,
+              1,
+              345,
+              240
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            33
           ],
           "bad_polygon": false
         },
@@ -5191,162 +5438,211 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              560.0,
-              344.0,
-              561.0,
-              357.0
+              560,
+              344,
+              561,
+              357
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                308.2,
+                147
+              ]
+            ],
             "box_xyxy": [
-              198.0,
-              96.0,
-              257.0,
-              192.0
+              198,
+              96,
+              257,
+              192
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            34
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0582": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                454.2,
+                98
+              ],
+              [
+                470.2,
+                104
+              ],
+              [
+                118.2,
+                161
+              ],
+              [
+                413.2,
+                115
+              ],
+              [
+                345.2,
+                117
+              ]
+            ],
             "box_xyxy": [
-              257.0,
-              64.0,
-              283.0,
-              89.0
+              257,
+              64,
+              283,
+              89
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            70,
+            34
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              299.0,
-              63.0,
-              419.0,
-              143.0
+              299,
+              63,
+              419,
+              143
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            35
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0583": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                453.2,
+                105
+              ],
+              [
+                395.2,
+                78
+              ]
+            ],
             "box_xyxy": [
-              322.0,
-              1.0,
-              358.0,
-              127.0
+              322,
+              1,
+              358,
+              127
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            40
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              342.0,
-              82.0,
-              405.0,
-              179.0
+              342,
+              82,
+              405,
+              179
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            35
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0593": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                174.2,
+                117
+              ],
+              [
+                468.2,
+                112
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              139.0,
-              268.0
+              1,
+              1,
+              139,
+              268
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            36
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                550.2,
+                162
+              ]
+            ],
             "box_xyxy": [
-              423.0,
-              84.0,
-              512.0,
-              200.0
+              423,
+              84,
+              512,
+              200
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            35
           ],
           "bad_polygon": false
         }
@@ -5363,17 +5659,17 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              423.0,
-              106.0,
-              442.0,
-              117.0
+              423,
+              106,
+              442,
+              117
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "door_2": {
           "state": "unknown",
@@ -5381,33 +5677,38 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              423.0,
-              106.0,
-              442.0,
-              117.0
+              423,
+              106,
+              442,
+              117
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                517.2,
+                141
+              ]
+            ],
             "box_xyxy": [
-              59.0,
-              1.0,
-              100.0,
-              195.0
+              59,
+              1,
+              100,
+              195
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            32
           ],
           "bad_polygon": false
         }
@@ -5419,20 +5720,25 @@
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                345.2,
+                127
+              ]
+            ],
             "box_xyxy": [
-              157.0,
-              49.0,
-              312.0,
-              187.0
+              157,
+              49,
+              312,
+              187
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            85,
+            35
           ],
           "bad_polygon": false
         },
@@ -5440,19 +5746,24 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                360.2,
+                104
+              ]
+            ],
             "box_xyxy": [
-              42.0,
-              1.0,
-              160.0,
-              421.0
+              42,
+              1,
+              160,
+              421
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            52
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "door_2": {
           "state": "unknown",
@@ -5460,17 +5771,17 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              536.0,
-              1.0,
-              561.0,
-              221.0
+              536,
+              1,
+              561,
+              221
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -4,
+            31
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -5485,15 +5796,15 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              421.0,
-              124.0,
-              472.0,
-              160.0
+              421,
+              124,
+              472,
+              160
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         },
@@ -5501,96 +5812,172 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                544.2,
+                168
+              ],
+              [
+                531.2,
+                163
+              ],
+              [
+                500.2,
+                153
+              ],
+              [
+                494.2,
+                169
+              ],
+              [
+                508.2,
+                166
+              ],
+              [
+                505.2,
+                153
+              ],
+              [
+                523.2,
+                170
+              ],
+              [
+                506.2,
+                150
+              ],
+              [
+                488.2,
+                132
+              ],
+              [
+                481.2,
+                149
+              ],
+              [
+                493.2,
+                117
+              ],
+              [
+                467.2,
+                96
+              ],
+              [
+                531.2,
+                101
+              ],
+              [
+                533.2,
+                109
+              ]
+            ],
             "box_xyxy": [
-              470.0,
-              126.0,
-              523.0,
-              159.0
+              470,
+              126,
+              523,
+              159
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              542.0,
-              111.0,
-              561.0,
-              131.0
+              542,
+              111,
+              561,
+              131
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            8,
+            5
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0605": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "multiple_possible_issues",
       "notes": "",
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                197.2,
+                134
+              ]
+            ],
             "box_xyxy": [
-              82.0,
-              102.0,
-              176.0,
-              173.0
+              82,
+              102,
+              176,
+              173
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            31
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_2": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                249.2,
+                135
+              ],
+              [
+                294.2,
+                144
+              ]
+            ],
             "box_xyxy": [
-              180.0,
-              108.0,
-              266.0,
-              168.0
+              180,
+              108,
+              266,
+              168
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            33
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                391.2,
+                126
+              ]
+            ],
             "box_xyxy": [
-              298.0,
-              83.0,
-              361.0,
-              134.0
+              298,
+              83,
+              361,
+              134
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            83,
+            34
           ],
           "bad_polygon": false
         }
@@ -5602,56 +5989,66 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                277.2,
+                85
+              ]
+            ],
             "box_xyxy": [
-              145.0,
-              1.0,
-              224.0,
-              206.0
+              145,
+              1,
+              224,
+              206
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            87,
+            36
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                509.2,
+                298
+              ]
+            ],
             "box_xyxy": [
-              396.0,
-              98.0,
-              453.0,
-              148.0
+              396,
+              98,
+              453,
+              148
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            33
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_2": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              333.0,
-              108.0,
-              368.0,
-              161.0
+              333,
+              108,
+              368,
+              161
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            33
           ],
           "bad_polygon": false
         }
@@ -5663,38 +6060,43 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              520.0,
-              53.0,
-              561.0,
-              234.0
+              520,
+              53,
+              561,
+              234
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            20,
+            30
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                389.2,
+                133
+              ]
+            ],
             "box_xyxy": [
-              239.0,
-              86.0,
-              339.0,
-              161.0
+              239,
+              86,
+              339,
+              161
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            32
           ],
           "bad_polygon": false
         }
@@ -5706,45 +6108,54 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              447.0,
-              1.0,
-              561.0,
-              226.0
+              447,
+              1,
+              561,
+              226
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            84,
+            35
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                322.2,
+                86
+              ],
+              [
+                520.2,
+                93
+              ]
+            ],
             "box_xyxy": [
-              123.0,
-              7.0,
-              271.0,
-              133.0
+              123,
+              7,
+              271,
+              133
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            85,
+            37
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0668": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
@@ -5752,60 +6163,78 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                538.2,
+                229
+              ],
+              [
+                281.2,
+                275
+              ]
+            ],
             "box_xyxy": [
-              551.0,
-              353.0,
-              561.0,
-              427.0
+              551,
+              353,
+              561,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -274,
+            -126
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              433.0,
-              1.0,
-              495.0,
-              12.0
+              433,
+              1,
+              495,
+              12
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            33
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0699": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                105.2,
+                380
+              ],
+              [
+                337.2,
+                110
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              48.0,
-              53.0,
-              427.0
+              1,
+              48,
+              53,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            59
           ],
           "bad_polygon": false
         },
@@ -5815,40 +6244,45 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              140.0,
-              45.0,
-              177.0,
-              112.0
+              140,
+              45,
+              177,
+              112
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            33
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
     "kv1__NYUdata__NYU0745": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                475.2,
+                137
+              ]
+            ],
             "box_xyxy": [
-              374.0,
-              106.0,
-              412.0,
-              137.0
+              374,
+              106,
+              412,
+              137
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            30
           ],
           "bad_polygon": false
         }
@@ -5898,25 +6332,30 @@
       }
     },
     "kv1__NYUdata__NYU0749": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                240.2,
+                174
+              ]
+            ],
             "box_xyxy": [
-              135.0,
-              124.0,
-              190.0,
-              170.0
+              135,
+              124,
+              190,
+              170
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            34
           ],
           "bad_polygon": false
         },
@@ -5926,58 +6365,68 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              1.0,
-              560.0,
-              5.0,
-              561.0
+              1,
+              560,
+              5,
+              561
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0766": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                427.2,
+                164
+              ]
+            ],
             "box_xyxy": [
-              331.0,
-              112.0,
-              370.0,
-              158.0
+              331,
+              112,
+              370,
+              158
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            32
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                532.2,
+                55
+              ]
+            ],
             "box_xyxy": [
-              450.0,
-              1.0,
-              464.0,
-              38.0
+              450,
+              1,
+              464,
+              38
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            34
           ],
           "bad_polygon": false
         }
@@ -5989,81 +6438,113 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                358.2,
+                73
+              ]
+            ],
             "box_xyxy": [
-              290.0,
-              1.0,
-              335.0,
-              128.0
+              290,
+              1,
+              335,
+              128
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            73,
+            37
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                371.2,
+                206
+              ],
+              [
+                405.2,
+                91
+              ]
+            ],
             "box_xyxy": [
-              292.0,
-              152.0,
-              322.0,
-              195.0
+              292,
+              152,
+              322,
+              195
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            73,
+            29
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                400.2,
+                125
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              11.0,
-              48.0
+              1,
+              1,
+              11,
+              48
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            100,
+            89
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0781": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                516.2,
+                209
+              ],
+              [
+                325.2,
+                41
+              ],
+              [
+                373.2,
+                55
+              ]
+            ],
             "box_xyxy": [
-              285.0,
-              1.0,
-              359.0,
-              54.0
+              285,
+              1,
+              359,
+              54
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            37
           ],
           "bad_polygon": false
         },
@@ -6073,40 +6554,45 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              1.0,
-              455.0,
-              1.0,
-              456.0
+              1,
+              455,
+              1,
+              456
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0782": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                253.2,
+                63
+              ]
+            ],
             "box_xyxy": [
-              150.0,
-              20.0,
-              211.0,
-              204.0
+              150,
+              20,
+              211,
+              204
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            38
           ],
           "bad_polygon": false
         }
@@ -6118,38 +6604,60 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                458.2,
+                69
+              ],
+              [
+                226.2,
+                127
+              ],
+              [
+                479.2,
+                85
+              ]
+            ],
             "box_xyxy": [
-              130.0,
-              80.0,
-              172.0,
-              129.0
+              130,
+              80,
+              172,
+              129
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            29
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                457.2,
+                65
+              ],
+              [
+                490.2,
+                94
+              ]
+            ],
             "box_xyxy": [
-              380.0,
-              44.0,
-              447.0,
-              100.0
+              380,
+              44,
+              447,
+              100
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            32
           ],
           "bad_polygon": false
         }
@@ -6161,117 +6669,179 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                455.2,
+                225
+              ]
+            ],
             "box_xyxy": [
-              371.0,
-              150.0,
-              396.0,
-              242.0
+              371,
+              150,
+              396,
+              242
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            36
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                462.2,
+                217
+              ]
+            ],
             "box_xyxy": [
-              187.0,
-              141.0,
-              239.0,
-              330.0
+              187,
+              141,
+              239,
+              330
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            32
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                258.2,
+                152
+              ],
+              [
+                509.2,
+                272
+              ]
+            ],
             "box_xyxy": [
-              413.0,
-              207.0,
-              453.0,
-              265.0
+              413,
+              207,
+              453,
+              265
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            32
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0789": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                124.2,
+                194
+              ]
+            ],
             "box_xyxy": [
-              12.0,
-              139.0,
-              91.0,
-              326.0
+              12,
+              139,
+              91,
+              326
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            33
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                546.2,
+                161
+              ],
+              [
+                530.2,
+                135
+              ],
+              [
+                553.2,
+                237
+              ],
+              [
+                516.2,
+                269
+              ]
+            ],
             "box_xyxy": [
-              505.0,
-              95.0,
-              561.0,
-              257.0
+              505,
+              95,
+              561,
+              257
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            56,
+            23
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                220.2,
+                105
+              ],
+              [
+                121.2,
+                49
+              ],
+              [
+                275.2,
+                93
+              ],
+              [
+                264.2,
+                38
+              ],
+              [
+                247.2,
+                101
+              ]
+            ],
             "box_xyxy": [
-              24.0,
-              2.0,
-              50.0,
-              19.0
+              24,
+              2,
+              50,
+              19
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            39
           ],
           "bad_polygon": false
         },
@@ -6281,15 +6851,15 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              232.0,
-              1.0,
-              245.0,
-              159.0
+              232,
+              1,
+              245,
+              159
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            36
           ],
           "bad_polygon": false
         },
@@ -6297,71 +6867,90 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                402.2,
+                81
+              ],
+              [
+                467.2,
+                47
+              ]
+            ],
             "box_xyxy": [
-              384.0,
-              1.0,
-              397.0,
-              150.0
+              384,
+              1,
+              397,
+              150
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            37
           ],
           "bad_polygon": false
         },
         "lamp_4": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                299.2,
+                62
+              ]
+            ],
             "box_xyxy": [
-              203.0,
-              19.0,
-              226.0,
-              35.0
+              203,
+              19,
+              226,
+              35
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            35
           ],
           "bad_polygon": false
         },
         "lamp_5": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                444.2,
+                74
+              ]
+            ],
             "box_xyxy": [
-              345.0,
-              37.0,
-              374.0,
-              52.0
+              345,
+              37,
+              374,
+              52
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            85,
+            35
           ],
           "bad_polygon": false
         },
         "lamp_6": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              543.0,
-              10.0,
-              561.0,
-              27.0
+              543,
+              10,
+              561,
+              27
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            10,
+            42
           ],
           "bad_polygon": false
         }
@@ -6373,160 +6962,223 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                341.2,
+                157
+              ]
+            ],
             "box_xyxy": [
-              244.0,
-              117.0,
-              309.0,
-              320.0
+              244,
+              117,
+              309,
+              320
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            40
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                555.2,
+                129
+              ]
+            ],
             "box_xyxy": [
-              524.0,
-              83.0,
-              548.0,
-              134.0
+              524,
+              83,
+              548,
+              134
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            22,
+            31
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0791": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                531.2,
+                192
+              ]
+            ],
             "box_xyxy": [
-              403.0,
-              98.0,
-              496.0,
-              301.0
+              403,
+              98,
+              496,
+              301
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            35
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                328.2,
+                70
+              ],
+              [
+                477.2,
+                121
+              ]
+            ],
             "box_xyxy": [
-              223.0,
-              1.0,
-              274.0,
-              109.0
+              223,
+              1,
+              274,
+              109
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            35
           ],
           "bad_polygon": false
         },
         "lamp_2": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                505.2,
+                136
+              ]
+            ],
             "box_xyxy": [
-              412.0,
-              19.0,
-              449.0,
-              145.0
+              412,
+              19,
+              449,
+              145
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            31
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0801": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                501.2,
+                109
+              ],
+              [
+                322.2,
+                97
+              ],
+              [
+                302.2,
+                78
+              ],
+              [
+                252.2,
+                121
+              ]
+            ],
             "box_xyxy": [
-              252.0,
-              1.0,
-              304.0,
-              159.0
+              252,
+              1,
+              304,
+              159
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            83,
+            43
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              184.0,
-              1.0,
-              249.0,
-              209.0
+              184,
+              1,
+              249,
+              209
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            35
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                495.2,
+                101
+              ],
+              [
+                485.2,
+                101
+              ],
+              [
+                480.2,
+                108
+              ],
+              [
+                417.2,
+                99
+              ]
+            ],
             "box_xyxy": [
-              358.0,
-              63.0,
-              438.0,
-              121.0
+              358,
+              63,
+              438,
+              121
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            30
           ],
           "bad_polygon": false
         }
@@ -6538,38 +7190,64 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                382.2,
+                45
+              ]
+            ],
             "box_xyxy": [
-              286.0,
-              1.0,
-              332.0,
-              140.0
+              286,
+              1,
+              332,
+              140
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            40
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                345.2,
+                73
+              ],
+              [
+                187.2,
+                153
+              ],
+              [
+                360.2,
+                90
+              ],
+              [
+                395.2,
+                60
+              ],
+              [
+                332.2,
+                69
+              ]
+            ],
             "box_xyxy": [
-              197.0,
-              87.0,
-              237.0,
-              132.0
+              197,
+              87,
+              237,
+              132
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -34,
+            52
           ],
           "bad_polygon": false
         }
@@ -6584,42 +7262,60 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                374.2,
+                216
+              ],
+              [
+                429.2,
+                233
+              ],
+              [
+                536.2,
+                334
+              ]
+            ],
             "box_xyxy": [
-              479.0,
-              311.0,
-              508.0,
-              380.0
+              479,
+              311,
+              508,
+              380
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                425.2,
+                246
+              ]
+            ],
             "box_xyxy": [
-              329.0,
-              189.0,
-              388.0,
-              249.0
+              329,
+              189,
+              388,
+              249
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            37
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0836": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_idle_monitor_usage",
       "notes": "",
       "reviewer": "",
       "instances": {
@@ -6629,198 +7325,278 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              1.0,
-              75.0,
-              104.0,
-              207.0
+              1,
+              75,
+              104,
+              207
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                178.2,
+                153
+              ],
+              [
+                319.2,
+                219
+              ],
+              [
+                138.2,
+                98
+              ],
+              [
+                51.2,
+                101
+              ]
+            ],
             "box_xyxy": [
-              225.0,
-              176.0,
-              259.0,
-              195.0
+              225,
+              176,
+              259,
+              195
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            34
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0854": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                201.2,
+                52
+              ]
+            ],
             "box_xyxy": [
-              204.0,
-              1.0,
-              273.0,
-              127.0
+              204,
+              1,
+              273,
+              127
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -31,
+            31
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              444.0,
-              1.0,
-              534.0,
-              42.0
+              444,
+              1,
+              534,
+              42
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            56,
+            34
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0875": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                238.2,
+                96
+              ],
+              [
+                265.2,
+                133
+              ]
+            ],
             "box_xyxy": [
-              173.0,
-              52.0,
-              228.0,
-              162.0
+              173,
+              52,
+              228,
+              162
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            37
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                165.2,
+                96
+              ]
+            ],
             "box_xyxy": [
-              84.0,
-              4.0,
-              99.0,
-              61.0
+              84,
+              4,
+              99,
+              61
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            39
           ],
           "bad_polygon": false
         },
         "lamp_2": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                129.2,
+                65
+              ],
+              [
+                191.2,
+                97
+              ]
+            ],
             "box_xyxy": [
-              117.0,
-              6.0,
-              131.0,
-              71.0
+              117,
+              6,
+              131,
+              71
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            65,
+            33
           ],
           "bad_polygon": false
         },
         "lamp_3": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                116.2,
+                84.8
+              ],
+              [
+                110.2,
+                70.8
+              ],
+              [
+                104.2,
+                65.8
+              ],
+              [
+                103.2,
+                55.8
+              ],
+              [
+                197.2,
+                51.8
+              ]
+            ],
             "box_xyxy": [
-              102.0,
-              1.0,
-              118.0,
-              69.0
+              102,
+              1,
+              118,
+              69
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            93,
+            37
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0877": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "multiple_possible_issues",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                462.2,
+                190
+              ],
+              [
+                387.2,
+                195
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              44.0,
-              23.0,
-              171.0
+              1,
+              44,
+              23,
+              171
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            88,
+            47
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                447.2,
+                213
+              ]
+            ],
             "box_xyxy": [
-              339.0,
-              147.0,
-              406.0,
-              205.0
+              339,
+              147,
+              406,
+              205
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            30
           ],
           "bad_polygon": false
         }
@@ -6837,15 +7613,15 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              485.0,
-              1.0,
-              561.0,
-              427.0
+              485,
+              1,
+              561,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            32,
+            87
           ],
           "bad_polygon": false
         },
@@ -6853,42 +7629,56 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                317.2,
+                121
+              ],
+              [
+                429.2,
+                144
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              16.0,
-              13.0
+              1,
+              1,
+              16,
+              13
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         },
         "lamp_2": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                420.2,
+                101
+              ]
+            ],
             "box_xyxy": [
-              323.0,
-              5.0,
-              345.0,
-              81.0
+              323,
+              5,
+              345,
+              81
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            36
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0885": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
@@ -6896,35 +7686,53 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                281.2,
+                127
+              ],
+              [
+                537.2,
+                139
+              ],
+              [
+                214.2,
+                133
+              ]
+            ],
             "box_xyxy": [
-              547.0,
-              63.0,
-              561.0,
-              120.0
+              547,
+              63,
+              561,
+              120
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -20,
+            42
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                217.2,
+                132
+              ]
+            ],
             "box_xyxy": [
-              121.0,
-              75.0,
-              161.0,
-              147.0
+              121,
+              75,
+              161,
+              147
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            39
           ],
           "bad_polygon": false
         }
@@ -6936,45 +7744,59 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                108.2,
+                279
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              49.0,
-              378.0
+              1,
+              1,
+              49,
+              378
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            83,
+            47
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                129.2,
+                292
+              ],
+              [
+                309.2,
+                173
+              ]
+            ],
             "box_xyxy": [
-              215.0,
-              114.0,
-              260.0,
-              192.0
+              215,
+              114,
+              260,
+              192
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            73,
+            32
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0912": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
@@ -6982,35 +7804,56 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                445.2,
+                128
+              ],
+              [
+                549.2,
+                298
+              ],
+              [
+                231.2,
+                151
+              ],
+              [
+                118.2,
+                153
+              ],
+              [
+                137.2,
+                221
+              ]
+            ],
             "box_xyxy": [
-              23.0,
-              106.0,
-              45.0,
-              116.0
+              23,
+              106,
+              45,
+              116
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            84,
+            45
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "door_2": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              512.0,
-              1.0,
-              561.0,
-              387.0
+              512,
+              1,
+              561,
+              387
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            28,
+            110
           ],
           "bad_polygon": false
         },
@@ -7018,96 +7861,125 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                82.2,
+                302
+              ]
+            ],
             "box_xyxy": [
-              23.0,
-              106.0,
-              46.0,
-              116.0
+              23,
+              106,
+              46,
+              116
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            47,
+            194
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "door_4": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                302.2,
+                127
+              ]
+            ],
             "box_xyxy": [
-              200.0,
-              1.0,
-              244.0,
-              246.0
+              200,
+              1,
+              244,
+              246
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            33
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                357.2,
+                61
+              ],
+              [
+                117.2,
+                159
+              ]
+            ],
             "box_xyxy": [
-              244.0,
-              20.0,
-              438.0,
-              191.0
+              244,
+              20,
+              438,
+              191
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            64,
+            35
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0916": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                109.2,
+                157
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              59.0,
-              191.0
+              1,
+              1,
+              59,
+              191
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            36
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                544.2,
+                126
+              ]
+            ],
             "box_xyxy": [
-              413.0,
-              39.0,
-              499.0,
-              181.0
+              413,
+              39,
+              499,
+              181
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            41
           ],
           "bad_polygon": false
         }
@@ -7124,33 +7996,38 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              559.0,
-              186.0,
-              561.0,
-              204.0
+              559,
+              186,
+              561,
+              204
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                154.2,
+                136
+              ]
+            ],
             "box_xyxy": [
-              59.0,
-              62.0,
-              127.0,
-              200.0
+              59,
+              62,
+              127,
+              200
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            33
           ],
           "bad_polygon": false
         }
@@ -7162,56 +8039,83 @@
       "reviewer": "",
       "instances": {
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                467.2,
+                203
+              ],
+              [
+                311.2,
+                164
+              ],
+              [
+                368.2,
+                158
+              ]
+            ],
             "box_xyxy": [
-              228.0,
-              100.0,
-              243.0,
-              154.0
+              228,
+              100,
+              243,
+              154
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            33
           ],
           "bad_polygon": false
         },
         "lamp_2": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                373.2,
+                161
+              ]
+            ],
             "box_xyxy": [
-              291.0,
-              121.0,
-              303.0,
-              147.0
+              291,
+              121,
+              303,
+              147
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            36
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                469.2,
+                170
+              ],
+              [
+                534.2,
+                163
+              ]
+            ],
             "box_xyxy": [
-              447.0,
-              110.0,
-              500.0,
-              206.0
+              447,
+              110,
+              500,
+              206
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            74,
+            38
           ],
           "bad_polygon": false
         }
@@ -7226,42 +8130,52 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                217.2,
+                208
+              ]
+            ],
             "box_xyxy": [
-              196.0,
-              135.0,
-              221.0,
-              162.0
+              196,
+              135,
+              221,
+              162
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            5,
+            60
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                526.2,
+                351
+              ]
+            ],
             "box_xyxy": [
-              506.0,
-              335.0,
-              524.0,
-              343.0
+              506,
+              335,
+              524,
+              343
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            36,
+            -132
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0926": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
@@ -7271,53 +8185,70 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              474.0,
-              351.0,
-              517.0,
-              384.0
+              474,
+              351,
+              517,
+              384
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              503.0,
-              1.0,
-              561.0,
-              427.0
+              503,
+              1,
+              561,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            2,
+            47
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                530.2,
+                278
+              ],
+              [
+                490.2,
+                157
+              ],
+              [
+                428.2,
+                380
+              ],
+              [
+                445.2,
+                373
+              ]
+            ],
             "box_xyxy": [
-              402.0,
-              109.0,
-              424.0,
-              177.0
+              402,
+              109,
+              424,
+              177
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            32
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -7327,38 +8258,52 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                152.2,
+                78
+              ]
+            ],
             "box_xyxy": [
-              58.0,
-              1.0,
-              131.0,
-              422.0
+              58,
+              1,
+              131,
+              422
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            67,
+            37
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                179.2,
+                173
+              ],
+              [
+                218.2,
+                185
+              ]
+            ],
             "box_xyxy": [
-              522.0,
-              137.0,
-              544.0,
-              179.0
+              522,
+              137,
+              544,
+              179
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            45,
+            21
           ],
           "bad_polygon": false
         },
@@ -7366,17 +8311,22 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                468.2,
+                156
+              ]
+            ],
             "box_xyxy": [
-              371.0,
-              107.0,
-              425.0,
-              194.0
+              371,
+              107,
+              425,
+              194
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            33
           ],
           "bad_polygon": false
         }
@@ -7388,20 +8338,25 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                513.2,
+                154
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              1.0,
-              85.0,
-              181.0
+              1,
+              1,
+              85,
+              181
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            47
           ],
           "bad_polygon": false
         },
@@ -7409,19 +8364,56 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                356.2,
+                138
+              ],
+              [
+                413.2,
+                150
+              ],
+              [
+                426.2,
+                142
+              ],
+              [
+                426.2,
+                138
+              ],
+              [
+                436.2,
+                123
+              ],
+              [
+                429.2,
+                104
+              ],
+              [
+                425.2,
+                134
+              ],
+              [
+                401.2,
+                145
+              ],
+              [
+                350.2,
+                125
+              ]
+            ],
             "box_xyxy": [
-              425.0,
-              96.0,
-              442.0,
-              149.0
+              425,
+              96,
+              442,
+              149
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -74,
+            22
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -7431,20 +8423,20 @@
       "reviewer": "",
       "instances": {
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              483.0,
-              240.0,
-              518.0,
-              251.0
+              483,
+              240,
+              518,
+              251
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            59,
+            -49
           ],
           "bad_polygon": false
         },
@@ -7454,17 +8446,17 @@
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              519.0,
-              1.0,
-              561.0,
-              148.0
+              519,
+              1,
+              561,
+              148
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            7,
+            24
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -7474,38 +8466,43 @@
       "reviewer": "",
       "instances": {
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                412.2,
+                113
+              ]
+            ],
             "box_xyxy": [
-              326.0,
-              63.0,
-              353.0,
-              111.0
+              326,
+              63,
+              353,
+              111
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            75,
+            36
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              344.0,
-              1.0,
-              534.0,
-              48.0
+              344,
+              1,
+              534,
+              48
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            80,
+            37
           ],
           "bad_polygon": false
         }
@@ -7520,37 +8517,47 @@
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                357.2,
+                109
+              ]
+            ],
             "box_xyxy": [
-              555.0,
-              102.0,
-              561.0,
-              154.0
+              555,
+              102,
+              561,
+              154
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            -12,
+            59
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         },
         "lamp_1": {
           "state": "unknown",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                297.2,
+                81
+              ]
+            ],
             "box_xyxy": [
-              235.0,
-              65.0,
-              244.0,
-              95.0
+              235,
+              65,
+              244,
+              95
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            60,
+            5
           ],
-          "bad_polygon": false
+          "bad_polygon": true
         }
       }
     },
@@ -7560,124 +8567,182 @@
       "reviewer": "",
       "instances": {
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                477.2,
+                63
+              ]
+            ],
             "box_xyxy": [
-              376.0,
-              29.0,
-              456.0,
-              113.0
+              376,
+              29,
+              456,
+              113
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            32
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                555.2,
+                107
+              ],
+              [
+                531.2,
+                119
+              ]
+            ],
             "box_xyxy": [
-              454.0,
-              73.0,
-              519.0,
-              123.0
+              454,
+              73,
+              519,
+              123
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            82,
+            33
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0952": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_open_door_inefficiency",
       "notes": "",
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "open",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                341.2,
+                221
+              ],
+              [
+                474.2,
+                299
+              ],
+              [
+                481.2,
+                126
+              ],
+              [
+                482.2,
+                169
+              ],
+              [
+                529.2,
+                205
+              ],
+              [
+                524.2,
+                407
+              ]
+            ],
             "box_xyxy": [
-              521.0,
-              1.0,
-              561.0,
-              427.0
+              521,
+              1,
+              561,
+              427
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            18,
+            22
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                323.2,
+                185
+              ]
+            ],
             "box_xyxy": [
-              216.0,
-              124.0,
-              275.0,
-              207.0
+              216,
+              124,
+              275,
+              207
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            78,
+            39
           ],
           "bad_polygon": false
         }
       }
     },
     "kv1__NYUdata__NYU0960": {
-      "scene_energy_label": "unknown",
+      "scene_energy_label": "possible_unnecessary_lighting",
       "notes": "",
       "reviewer": "",
       "instances": {
         "lamp_1": {
-          "state": "unknown",
+          "state": "on",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                543.2,
+                200
+              ],
+              [
+                555.2,
+                212
+              ]
+            ],
             "box_xyxy": [
-              430.0,
-              132.0,
-              555.0,
-              360.0
+              430,
+              132,
+              555,
+              360
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            65,
+            25
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                404.2,
+                216
+              ]
+            ],
             "box_xyxy": [
-              310.0,
-              168.0,
-              381.0,
-              257.0
+              310,
+              168,
+              381,
+              257
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            79,
+            32
           ],
           "bad_polygon": false
         }
@@ -7689,56 +8754,61 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              371.0,
-              1.0,
-              534.0,
-              369.0
+              371,
+              1,
+              534,
+              369
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            85,
+            34
           ],
           "bad_polygon": false
         },
         "door_2": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              519.0,
-              1.0,
-              561.0,
-              376.0
+              519,
+              1,
+              561,
+              376
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            41,
+            22
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                352.2,
+                191
+              ]
+            ],
             "box_xyxy": [
-              251.0,
-              140.0,
-              297.0,
-              230.0
+              251,
+              140,
+              297,
+              230
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            39
           ],
           "bad_polygon": false
         }
@@ -7750,38 +8820,43 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                528.2,
+                177
+              ]
+            ],
             "box_xyxy": [
-              500.0,
-              1.0,
-              561.0,
-              375.0
+              500,
+              1,
+              561,
+              375
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            59,
+            39
           ],
           "bad_polygon": false
         },
         "monitor_or_tv_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
             "negative_points": [],
             "box_xyxy": [
-              304.0,
-              89.0,
-              391.0,
-              189.0
+              304,
+              89,
+              391,
+              189
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            76,
+            31
           ],
           "bad_polygon": false
         }
@@ -7793,38 +8868,56 @@
       "reviewer": "",
       "instances": {
         "door_1": {
-          "state": "unknown",
+          "state": "closed",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                131.2,
+                243
+              ],
+              [
+                85.2,
+                405
+              ]
+            ],
             "box_xyxy": [
-              1.0,
-              341.0,
-              10.0,
-              395.0
+              1,
+              341,
+              10,
+              395
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            81,
+            26
           ],
           "bad_polygon": false
         },
         "lamp_1": {
-          "state": "unknown",
+          "state": "off",
           "sam2_prompts": {
             "positive_points": [],
-            "negative_points": [],
+            "negative_points": [
+              [
+                105.2,
+                248
+              ],
+              [
+                121.2,
+                257
+              ]
+            ],
             "box_xyxy": [
-              31.0,
-              205.0,
-              75.0,
-              279.0
+              31,
+              205,
+              75,
+              279
             ]
           },
           "overlay_offset_xy": [
-            0.0,
-            0.0
+            77,
+            36
           ],
           "bad_polygon": false
         }
